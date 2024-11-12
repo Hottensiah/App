@@ -1,0 +1,158 @@
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+
+export default function Component() {
+  return (
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Request for Proposal (RFP)</h1>
+          <h2 className="text-2xl font-semibold text-gray-700">Anonymous Student Counseling App</h2>
+        </div>
+
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Project Overview</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              We are seeking proposals to develop a mobile/web application that allows students to anonymously connect
+              with psychologists for mental health support. The platform should prioritize user privacy, enabling
+              students to communicate with licensed psychologists without revealing their identity. This RFP is intended
+              for vendors experienced in app development with a focus on privacy, security, and user experience.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Accordion type="single" collapsible className="mb-8">
+          <AccordionItem value="goals">
+            <AccordionTrigger>1. Project Goals and Objectives</AccordionTrigger>
+            <AccordionContent>
+              <p className="font-semibold mb-2">Primary Goal:</p>
+              <p className="mb-4">
+                To create a safe, anonymous platform where students can receive professional psychological support.
+              </p>
+              <p className="font-semibold mb-2">Objectives:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Maintain full anonymity for students.</li>
+                <li>Provide psychologists with necessary context about a student's issues without revealing personal identity.</li>
+                <li>Ensure secure, encrypted communication between students and psychologists.</li>
+                <li>Offer an intuitive, user-friendly interface for students and psychologists.</li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="scope">
+            <AccordionTrigger>2. Scope of Work</AccordionTrigger>
+            <AccordionContent>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold mb-2">Student-Facing Features:</h4>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Anonymous Login: Allow students to log in without using identifiable information.</li>
+                    <li>Messaging System: Enable chat-based messaging with psychologists, with complete anonymity.</li>
+                    <li>Scheduling System: Optional scheduling of sessions without revealing identities.</li>
+                    <li>Questionnaire: Allow students to answer questions that help psychologists understand their issues while keeping personal details hidden.</li>
+                    <li>File Sharing: Allow students to share relevant files, if needed, while preserving anonymity.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Psychologist-Facing Features:</h4>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Secure Messaging Interface: Psychologists should have a chat interface to respond to students.</li>
+                    <li>Contextual Background: Display insights from the questionnaire for context without revealing identity.</li>
+                    <li>Analytics and Reporting: View anonymized metrics on user engagement for research purposes.</li>
+                    <li>Emergency Alerts: Psychologists should have a way to mark urgent cases, possibly notifying on-site counselors or administrators without revealing identities.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Admin Panel Features:</h4>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>User Management: Control access, assign psychologists, and monitor usage.</li>
+                    <li>Security Logs: Track access and actions for auditing purposes.</li>
+                    <li>Data Export/Import: Export anonymized data for research or reporting.</li>
+                  </ul>
+                </div>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="technical">
+            <AccordionTrigger>3. Technical Requirements</AccordionTrigger>
+            <AccordionContent>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Platform: Cross-platform compatibility (iOS, Android, and Web).</li>
+                <li>Security & Encryption: End-to-end encryption for all messages, files, and sensitive data.</li>
+                <li>Anonymity: No storage of personal identifiers in the database.</li>
+                <li>Scalability: Ability to handle thousands of concurrent users.</li>
+                <li>API Integrations: Integration with third-party tools for analytics, if required.</li>
+                <li>Compliance: Ensure compliance with data protection laws such as FERPA and HIPAA for privacy and security.</li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="budget">
+            <AccordionTrigger>4. Budget and Timeline</AccordionTrigger>
+            <AccordionContent>
+              <p className="mb-2"><span className="font-semibold">Budget:</span> $[Specify amount range]</p>
+              <p className="mb-2"><span className="font-semibold">Project Duration:</span> [Specify duration, e.g., 6 months]</p>
+              <p className="font-semibold mb-2">Phases:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Phase 1: Requirements Gathering & Design [Timeline, e.g., 1 month]</li>
+                <li>Phase 2: Development & Testing [Timeline, e.g., 4 months]</li>
+                <li>Phase 3: Launch & Support [Timeline, e.g., 1 month]</li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="proposal">
+            <AccordionTrigger>5. Proposal Requirements</AccordionTrigger>
+            <AccordionContent>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Company Overview: Brief description of your company, including experience with similar projects.</li>
+                <li>Proposed Solution: Explain your approach to the technical and functional requirements outlined above.</li>
+                <li>Project Timeline: Provide an estimated timeline, including phases and milestones.</li>
+                <li>Budget Breakdown: Detailed cost estimate, including any licensing or recurring fees.</li>
+                <li>Team: Resumes or bios of key personnel assigned to this project.</li>
+                <li>Portfolio: Examples of similar work, if available.</li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="evaluation">
+            <AccordionTrigger>6. Evaluation Criteria</AccordionTrigger>
+            <AccordionContent>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Relevant Experience (25%)</li>
+                <li>Technical Approach (20%)</li>
+                <li>Timeline & Project Management (20%)</li>
+                <li>Cost (15%)</li>
+                <li>Security & Compliance Measures (20%)</li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="submission">
+            <AccordionTrigger>7. Submission Details</AccordionTrigger>
+            <AccordionContent>
+              <p className="mb-2"><span className="font-semibold">Deadline:</span> [Specify submission deadline]</p>
+              <p className="mb-2"><span className="font-semibold">Contact Information:</span> [Provide email/phone number]</p>
+              <p className="font-semibold mb-2">Additional Considerations:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Confidentiality: Any proposals submitted will be kept confidential.</li>
+                <li>Vendor Q&A: Vendors may submit questions before the deadline.</li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
+        <div className="text-center">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Submit Proposal
+          </Button>
+        </div>
+      </div>
+    </div>
+  )
+}
